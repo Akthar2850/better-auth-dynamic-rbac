@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ...but do publish the template
+!.env.example
+
+# local database — it holds user rows and password hashes
+*.db
+
+# internal design notes, kept locally only
+rbac-flow-diagram.txt
