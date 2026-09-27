@@ -90,7 +90,7 @@ export default function Dashboard() {
   const roleDescription: Record<string, string> = {
     admin: "Full access to all resources. Can manage users and change roles.",
     agent: "Read-only access to most resources. Full CRUD on Reports. Attached to an organization.",
-    endUser: "Read and write access to own data. No access to Reports. Read-only on Projects.",
+    endUser: "Mostly read-only. Can add payments and payment methods, and edit projects. Sees only their own invoices. No access to Customers or Reports.",
   };
 
   return (
@@ -133,7 +133,7 @@ export default function Dashboard() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <RoleCard
                 role="endUser"
-                description="Create, read, update on most resources. No report access."
+                description="Mostly read-only. Adds payments and payment methods. No customer or report access."
                 highlight={roleId === "endUser"}
               />
               <RoleCard
