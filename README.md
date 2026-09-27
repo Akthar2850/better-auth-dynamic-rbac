@@ -9,6 +9,37 @@ or changing what one can do means a redeploy. Here an admin creates a role,
 ticks the permissions it should have, and assigns users to it, and the change
 takes effect straight away.
 
+## Screenshots
+
+**An admin sees every resource, with full permissions.**
+
+![Admin dashboard: all nine resources in the sidebar, and a full permission matrix](docs/screenshots/dashboard-admin.png)
+
+**An agent can read everything, but change only reports.** Same nine
+resources in the sidebar; one row of the matrix is fully ticked.
+
+![Agent dashboard: all nine resources, read-only except full access to reports](docs/screenshots/dashboard-agent.png)
+
+**An end user sees less.** The sidebar only lists what the role can read —
+seven resources here — and the matrix shows exactly what it can do.
+
+![End-user dashboard: seven resources in the sidebar, and a mostly read-only matrix](docs/screenshots/dashboard-enduser.png)
+
+**Roles are managed from the admin page**, not from code. Built-in roles are
+marked *System* and can't be deleted.
+
+![Roles tab: the admin, agent and endUser roles with their permission counts](docs/screenshots/admin-roles.png)
+
+**Agents see only the invoices they've been granted.** Bob was given access to
+Carol's invoices, so those are the only two he sees.
+
+![Invoices page as an agent: only Carol's two invoices are shown](docs/screenshots/invoices-agent.png)
+
+**Sample accounts are listed on the sign-in page** — click one to try that
+role.
+
+![Sign-in page with the clickable sample accounts](docs/screenshots/sign-in.png)
+
 ## What it shows
 
 - **Database-backed roles.** Three built-in roles (`admin`, `agent`,
